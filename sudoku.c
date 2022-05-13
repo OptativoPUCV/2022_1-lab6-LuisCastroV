@@ -63,7 +63,7 @@ List* get_adj_nodes(Node* n)
           Node *adn_j=(Node*)malloc(sizeof(Node));
           adn_j->sudo=copy(n->sudo,9);
           adn_j->sudo[i][j]=move;
-          push_back(list, adn_j);
+          pushBack(list, adn_j);
 
         }
     }
