@@ -49,9 +49,28 @@ int is_valid(Node* n){
 }
 
 
-List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+List* get_adj_nodes(Node* n)
+{
+  List* list=createList(); 
+  int i,j;
+  char move;
+  for(i=0;i<9;i++)
+  {
+    for(j=0;j<9;j++)
+    {
+        if(n->sudo[i][j]=="0")
+        {
+          Node *adn_j=(Node*)malloc(sizeof(Node));
+          adn_j->sudo=copy(n->sudo,9);
+          adn_j->sudo[i][j]=move;
+          push_back(list, adn_j);
+
+        }
+    }
+  }
+  // obtenga los nodos adyacentes a n y agréguelos a la lista
+  
+  return list;
 }
 
 

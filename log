@@ -1,0 +1,31 @@
+Fri May 13 15:40:07 UTC 2022: 
+ sudoku.c | 21 ++++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:61:25: error: comparison between pointer and integer [-Werror]
+         if(n->sudo[i][j]=="0")
+                         ^~
+sudoku.c:61:25: error: comparison with string literal results in unspecified behavior [-Werror=address]
+sudoku.c:64:28: error: passing argument 1 of ‘copy’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+           adn_j->sudo=copy(n->sudo,9);
+                            ^
+sudoku.c:15:7: note: expected ‘Node * {aka struct <anonymous> *}’ but argument is of type ‘int (*)[9]’
+ Node* copy(Node* n){
+       ^~~~
+sudoku.c:64:23: error: too many arguments to function ‘copy’
+           adn_j->sudo=copy(n->sudo,9);
+                       ^~~~
+sudoku.c:15:7: note: declared here
+ Node* copy(Node* n){
+       ^~~~
+sudoku.c:64:22: error: assignment to expression with array type
+           adn_j->sudo=copy(n->sudo,9);
+                      ^
+sudoku.c:66:11: error: implicit declaration of function ‘push_back’; did you mean ‘pushBack’? [-Werror=implicit-function-declaration]
+           push_back(list, adn_j);
+           ^~~~~~~~~
+           pushBack
+cc1: all warnings being treated as errors
+Compilation failed
+81d8e34
