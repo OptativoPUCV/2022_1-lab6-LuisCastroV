@@ -81,3 +81,9 @@ sudoku.c:64:22: error: assignment to expression with array type
 cc1: all warnings being treated as errors
 Compilation failed
 af4dfc3
+Sat May 14 17:46:17 UTC 2022: 
+ sudoku.c | 16 +---------------
+ 1 file changed, 1 insertion(+), 15 deletions(-)
+ tests:  0|5
+total_score: 0/70
+861cab9
