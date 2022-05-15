@@ -111,18 +111,33 @@ int is_valid(Node* n)
     return 1;
 }
 
+int posicionActual(Node*n,int linea)
+{
+  for(int i=0;i<9;i++)
+    {
+      if(n->sudo[line][i]==0)
+      {
+        return i
+      }
+    }
+  return 0;
+}
 List* get_adj_nodes(Node* n)
 {
   List* list=createList(); 
   for(int i=0;i<9;i++)
   {
-    for(int j=0;j<9;j++)
+    if(posicionActual(n,i)!=0)
     {
-      Node* Adj=copy(n);
-      Adj->sudo[i][j]=j;
-      if(is_valid(Adj)==1)
+      for(int j=0;j<9;j++)
       {
-        pushBack(list,Adj);
+        Node* Adj=copy(n);
+        int detecotr=posicionActual(n,i);
+        Adj->sudo[i][detecotr]=j;
+        if(is_valid(Adj)==1)
+        {
+          pushBack(list,Adj);
+        }
       }
     }
     break;

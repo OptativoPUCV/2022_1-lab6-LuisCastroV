@@ -201,3 +201,18 @@ Sun May 15 04:55:38 UTC 2022:
  tests:  4|3
 total_score: 30/70
 4602296
+Sun May 15 04:59:09 UTC 2022: 
+ sudoku.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘posicionActual’:
+sudoku.c:118:18: error: ‘line’ undeclared (first use in this function); did you mean ‘linea’?
+       if(n->sudo[line][i]==0)
+                  ^~~~
+                  linea
+sudoku.c:118:18: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:121:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+Compilation failed
+64ffe81
