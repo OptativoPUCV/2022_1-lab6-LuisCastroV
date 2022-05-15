@@ -147,3 +147,14 @@ sudoku.c:94:32: error: ‘p’ undeclared (first use in this function)
                                 ^
 Compilation failed
 8fcc626
+Sun May 15 04:46:17 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘vacio’:
+sudoku.c:51:7: error: ‘check’ undeclared (first use in this function)
+       check[i]=0;
+       ^~~~~
+sudoku.c:51:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+2828cd6
