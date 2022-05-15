@@ -173,16 +173,15 @@ Node* DFS(Node* initial, int* cont)
     { 
        return n;
     }
-     // else 
-     // {
-     // List* l=get_adj_nodes(n);
-     // Node* adj=first(l);
-     // while(adj)
-     // {
-     //    push(S,adj);
-     //    adj=next(l);
-     // }
+     List* l=get_adj_nodes(n);
+     Node* adj=first(l);
+     while(adj!=NULL)
+     {
+        push(S,adj);
+        adj=next(l);
+     }
   }
+  return NULL;
 }
 
 
