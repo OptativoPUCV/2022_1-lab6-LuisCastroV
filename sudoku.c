@@ -87,7 +87,7 @@ int is_valid(Node* n)
   }
   for(int l=0;l<9;l++)
     {
-      flag=lineaVacia();
+      //flag=lineaVacia();
       for(int a=0;a<9;a++){
         int i = 3 * (l / 3) + (a / 3);
         int j = 3 * (l % 3) + (a % 3);
