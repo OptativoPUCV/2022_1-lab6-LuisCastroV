@@ -180,6 +180,7 @@ Node* DFS(Node* initial, int* cont)
         push(S,adj);
         adj=next(l);
      }
+    (*cont)++;
   }
   return NULL;
 }
