@@ -143,7 +143,7 @@ List* get_adj_nodes(Node* n)
   //   }
   //   break;
   // }
-  return list;
+  // return list;
 }
 
 
