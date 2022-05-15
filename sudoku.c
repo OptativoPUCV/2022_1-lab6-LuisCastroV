@@ -88,10 +88,10 @@ int is_valid(Node* n)
   for(int l=0;l<9;l++)
     {
       flag=lineaVacia();
-      for(int a=0;a<9;a++){
+      for(int a=0;a<9;a++)
+      {
         int i = 3 * (l / 3) + (a / 3);
         int j = 3 * (l % 3) + (a % 3);
-
         int sudo=n->sudo[i][j];
         if(sudo==0)continue;
         if(flag[sudo]==0)
@@ -100,7 +100,7 @@ int is_valid(Node* n)
         }
         else
         {
-          free(flag);
+          //free(flag);
           return 0;
         }
       }
