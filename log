@@ -182,3 +182,16 @@ sudoku.c:123:19: error: ‘newNode’ undeclared (first use in this function); d
 sudoku.c:123:19: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 440eb65
+Sun May 15 04:55:10 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:123:19: error: expected expression before ‘Node’
+       if(is_valid(Node)==1)
+                   ^~~~
+sudoku.c:125:23: error: expected expression before ‘Node’
+         pushBack(list,Node);
+                       ^~~~
+Compilation failed
+10f2cfb

@@ -120,9 +120,9 @@ List* get_adj_nodes(Node* n)
     {
       Node* Adj=copy(n);
       Adj->sudo[i][j]=j;
-      if(is_valid(newNode)==1)
+      if(is_valid(Node)==1)
       {
-        pushBack(list,newNode);
+        pushBack(list,Node);
       }
     }
     break;
