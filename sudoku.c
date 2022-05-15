@@ -98,11 +98,7 @@ int is_valid(Node* n)
         {
           flag[sudo]=1;
         }
-        else
-        {
-          //free(flag);
-          return 0;
-        }
+        return 0;
       }
     }
 
