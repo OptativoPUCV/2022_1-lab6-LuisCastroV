@@ -167,7 +167,8 @@ Node* DFS(Node* initial, int* cont)
   push(S, initial);
   while(top(S)!=NULL)
   {
-    Node* n= top(S); 
+    
+    //Node* n=top(S); 
     pop(S);
      // if(!n->visited)
      // {
