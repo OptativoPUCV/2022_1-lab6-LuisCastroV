@@ -111,11 +111,11 @@ int is_valid(Node* n)
   return 1;
 }
 
-int posicionActual(Node*n,int linea)
+int posicionActual(Node*n,int casilla)
 {
   for(int i=0;i<9;i++)
     {
-      if(n->sudo[linea][i]==0)
+      if(n->sudo[casilla][i]==0)
       {
         return i;
       }
