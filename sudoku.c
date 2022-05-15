@@ -71,7 +71,7 @@ int is_valid(Node* n)
         flag[sudo]=1;
       }
     }
-    free(flag);
+    //free(flag);
     flag=lineaVacia();
     for(int j=0;j<9;j++)
       {
