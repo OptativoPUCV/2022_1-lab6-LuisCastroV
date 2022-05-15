@@ -45,7 +45,7 @@ void print_node(Node* n){
 
 int* lineaVacia()
 {
-  int* creador=(int*)malloc(sizeof(int)*11);
+  int* creador=(int*)malloc(sizeof(int)*10);
   for(int i=0;i<10;i++)
     {
       creador[i]=0;
