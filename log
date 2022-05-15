@@ -377,3 +377,14 @@ Sun May 15 05:18:00 UTC 2022:
  1 file changed, 1 insertion(+)
  tests:  0|0
 a41d1e4
+Sun May 15 05:18:18 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:147:10: error: return makes pointer from integer without a cast [-Werror=int-conversion]
+   return 1;
+          ^
+cc1: all warnings being treated as errors
+Compilation failed
+073fdf5
