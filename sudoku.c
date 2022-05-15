@@ -71,21 +71,19 @@ int is_valid(Node* n)
         flag[sudo]=1;
       }
     }
-    //free(flag);
     flag=lineaVacia();
     for(int j=0;j<9;j++)
+    {
+      int sudo=n->sudo[j][i];
+      if(sudo!=0)
       {
-        int sudo=n->sudo[j][i];
-        if(sudo!=0)
+        if(flag[sudo]!=0)
         {
-          if(flag[sudo]!=0)
-          {
-            return 0;
-          }
-          flag[sudo]=1;
+          return 0;
         }
+        flag[sudo]=1;
       }
-    //free(flag);
+    }
   }
   for(int l=0;l<9;l++)
     {
