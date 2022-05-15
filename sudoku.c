@@ -172,18 +172,22 @@ Node* DFS(Node* initial, int* cont)
     pop(S);
     if(is_final(n)==1)
     { 
-       return n;
+      return n;
     }
-     List* l=get_adj_nodes(n);
-     Node* adj=first(l);
-     while(adj!=NULL)
-     {
+    else
+    {
+      List* l=get_adj_nodes(n);
+      Node* adj=first(l);
+      while(adj!=NULL)
+      {
         push(S,adj);
         adj=next(l);
-     }
+      }
+    }
     free(n);
     (*cont)++;
-  }
+  }  
+  return NULL;
 }
 
 /*
