@@ -47,15 +47,15 @@ int* lineaVacia()
 {
   int* creador=(int*)malloc(sizeof(int)*10);
   for(int i=0;i<10;i++)
-    {
-      creador[i]=0;
-    }
+  {
+    creador[i]=0;
+  }
   return creador;
 }
 
 int is_valid(Node* n)
 {
-  int* flag;
+  int flag;
   for(int i=0;i<9;i++)
   {
     flag=lineaVacia();
