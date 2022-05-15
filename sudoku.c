@@ -170,7 +170,7 @@ Node* DFS(Node* initial, int* cont)
   {
     Node* n=top(S); 
     pop(S);
-    if(is_final(n)== 0)
+    if(is_final(n)== 1)
     { 
       return n;
     }
