@@ -133,8 +133,8 @@ List* get_adj_nodes(Node* n)
       for(int j=1;j<10;j++)
       {
         Node* Adj=copy(n);
-        int detecotr=posicionActual(n,i);
-        Adj->sudo[i][detecotr]=j;
+        int detector=posicionActual(n,i);
+        Adj->sudo[i][detector]=j;
         if(is_valid(Adj)==1)
         {
           pushBack(list,Adj);
