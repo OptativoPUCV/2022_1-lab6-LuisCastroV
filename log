@@ -518,3 +518,33 @@ Sun May 15 05:38:55 UTC 2022:
  tests:  7|1
 total_score: 55/70
 985bb97
+Sun May 15 16:46:15 UTC 2022: 
+ sudoku.c | 27 +++++++++++++++------------
+ 1 file changed, 15 insertions(+), 12 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:61:10: error: too few arguments to function ‘is_empty’
+     flag=is_empty();
+          ^~~~~~~~
+In file included from test.c:4:0:
+list.h:14:5: note: declared here
+ int is_empty(List* list);
+     ^~~~~~~~
+In file included from test.c:5:0:
+sudoku.c:76:10: error: too few arguments to function ‘is_empty’
+     flag=is_empty();
+          ^~~~~~~~
+In file included from test.c:4:0:
+list.h:14:5: note: declared here
+ int is_empty(List* list);
+     ^~~~~~~~
+In file included from test.c:5:0:
+sudoku.c:94:12: error: too few arguments to function ‘is_empty’
+       flag=is_empty();
+            ^~~~~~~~
+In file included from test.c:4:0:
+list.h:14:5: note: declared here
+ int is_empty(List* list);
+     ^~~~~~~~
+Compilation failed
+b34fe2f

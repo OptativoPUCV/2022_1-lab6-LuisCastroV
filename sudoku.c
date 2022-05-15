@@ -43,22 +43,23 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int* vacio()
-{
-  int* creador=(int*)malloc(sizeof(int)*11);
-  for(int i=0;i<10;i++)
-    {
-      creador[i]=0;
-    }
-  return creador;
-}
+// int* vacio()
+// {
+//   int* creador=(int*)malloc(sizeof(int)*11);
+//   for(int i=0;i<10;i++)
+//     {
+//       creador[i]=0;
+//     }
+//   return creador;
+// }
 
 int is_valid(Node* n)
 {
   int* flag;
   for(int i=0;i<9;i++)
   {
-    flag=vacio();
+    flag=is_empty();
+    //flag=vacio();
     for(int j=0;j<9;j++)
     {
       int sudo=n->sudo[i][j];
@@ -72,7 +73,8 @@ int is_valid(Node* n)
       }
     }
     free(flag);
-    flag=vacio();
+    flag=is_empty();
+    //flag=vacio();
     for(int j=0;j<9;j++)
       {
         int sudo=n->sudo[j][i];
@@ -89,7 +91,8 @@ int is_valid(Node* n)
   }
   for(int l=0;l<9;l++)
     {
-      flag=vacio();
+      flag=is_empty();
+      //flag=vacio();
       for(int a=0;a<9;a++){
         int i = 3 * (l / 3) + (a / 3);
         int j = 3 * (l % 3) + (a % 3);
@@ -150,16 +153,16 @@ List* get_adj_nodes(Node* n)
 int is_final(Node* n)
 {
   for(int i=0;i<9;i++)
+  {
+    for(int j=0;j<9;j++)
     {
-      for(int j=0;j<9;j++)
-        {
-          if(n->sudo[i][j]==0)
-          {
-            return 0;
-          }
-        }
+      if(n->sudo[i][j]==0)
+      {
+        return 0;
+      }
     }
-    return 1;
+  }
+  return 1;
 }
 
 Node* DFS(Node* initial, int* cont)
