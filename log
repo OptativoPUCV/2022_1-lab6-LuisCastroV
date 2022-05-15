@@ -821,3 +821,9 @@ sudoku.c:166:11: error: assignment makes pointer from integer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 18d8c7a
+Sun May 15 17:04:19 UTC 2022: 
+ sudoku.c | 98 ++++++++--------------------------------------------------------
+ 1 file changed, 12 insertions(+), 86 deletions(-)
+ tests:  7|1
+total_score: 55/70
+4612407
