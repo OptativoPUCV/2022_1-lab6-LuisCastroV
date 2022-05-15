@@ -111,7 +111,6 @@ int is_valid(Node* n)
     return 1;
 }
 
-
 List* get_adj_nodes(Node* n)
 {
   List* list=createList(); 
@@ -121,7 +120,12 @@ List* get_adj_nodes(Node* n)
     {
       Node* Adj=copy(n);
       Adj->sudo[i][j]=j;
+      if(is_valid(newNode)==1)
+      {
+        pushBack(list,newNode);
+      }
     }
+    break;
   }
   return list;
 }
