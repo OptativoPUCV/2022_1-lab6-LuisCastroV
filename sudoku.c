@@ -43,7 +43,7 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int* vacio()
+int* lineaVacia()
 {
   int* creador=(int*)malloc(sizeof(int)*11);
   for(int i=0;i<10;i++)
@@ -58,7 +58,7 @@ int is_valid(Node* n)
   int* flag;
   for(int i=0;i<9;i++)
   {
-    flag=vacio();
+    flag=lineaVacia();
     for(int j=0;j<9;j++)
     {
       int sudo=n->sudo[i][j];
@@ -72,7 +72,7 @@ int is_valid(Node* n)
       }
     }
     free(flag);
-    flag=vacio();
+    flag=lineaVacia();
     for(int j=0;j<9;j++)
       {
         int sudo=n->sudo[j][i];
@@ -89,7 +89,7 @@ int is_valid(Node* n)
   }
   for(int l=0;l<9;l++)
     {
-      flag=vacio();
+      flag=lineaVacia();
       for(int a=0;a<9;a++){
         int i = 3 * (l / 3) + (a / 3);
         int j = 3 * (l % 3) + (a % 3);
