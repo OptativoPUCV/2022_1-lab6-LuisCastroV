@@ -161,22 +161,30 @@ int is_final(Node* n)
     return 1;
 }
 
-Node* DFS(Node* initial, int* cont){
-  Stack* S=createStack();
-  push(S,initial);
-  // while (size(S) != 0){
-  //    node* n = pop(S);
-  //    if n.visited==true continue;
-    
-  //    //visitar nodo
-  //    n.visited=true
-  //    List* adj=get_adj_nodes(n);
-  //    node* aux= first(adj);
-  //    while(aux){
-  //       push(S,aux);
-  //       aux=next(adj);
-  //    }
+Node* DFS(Node* initial, int* cont)
+{
+  Stack* S = createStack();
+  push(S, initial);
+  while(top(S)!=NULL)
+  {
+    Node* n= top(S); 
+    pop(S);
+     // if(!n->visited)
+     // {
+     //     print_tag(n); n->visited=1;
+     // }
+     // else 
+     // {
+     // List* l=get_adj_nodes(n);
+     // Node* adj=first(l);
+     // while(adj)
+     // {
+     //    push(S,adj);
+     //    adj=next(l);
+     // }
+  }
 }
+
 
 
 
