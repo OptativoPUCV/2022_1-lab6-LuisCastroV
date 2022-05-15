@@ -607,3 +607,56 @@ In file included from test.c:2:0:
 cc1: all warnings being treated as errors
 Compilation failed
 06d08d1
+Sun May 15 16:50:55 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘vacio’:
+sudoku.c:53:10: error: return makes integer from pointer without a cast [-Werror=int-conversion]
+   return creador;
+          ^~~~~~~
+sudoku.c: In function ‘is_valid’:
+sudoku.c:67:16: error: subscripted value is neither array nor pointer nor vector
+         if(flag[sudo]!=0)
+                ^
+sudoku.c:71:13: error: subscripted value is neither array nor pointer nor vector
+         flag[sudo]=1;
+             ^
+sudoku.c:74:10: error: passing argument 1 of ‘free’ makes pointer from integer without a cast [-Werror=int-conversion]
+     free(flag);
+          ^~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from test.c:5:0:
+sudoku.c:81:18: error: subscripted value is neither array nor pointer nor vector
+           if(flag[sudo]!=0)
+                  ^
+sudoku.c:85:15: error: subscripted value is neither array nor pointer nor vector
+           flag[sudo]=1;
+               ^
+sudoku.c:88:10: error: passing argument 1 of ‘free’ makes pointer from integer without a cast [-Werror=int-conversion]
+     free(flag);
+          ^~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from test.c:5:0:
+sudoku.c:99:16: error: subscripted value is neither array nor pointer nor vector
+         if(flag[sudo]==0)
+                ^
+sudoku.c:101:15: error: subscripted value is neither array nor pointer nor vector
+           flag[sudo]=1;
+               ^
+sudoku.c:105:16: error: passing argument 1 of ‘free’ makes pointer from integer without a cast [-Werror=int-conversion]
+           free(flag);
+                ^~~~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘int’
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ee414e5
