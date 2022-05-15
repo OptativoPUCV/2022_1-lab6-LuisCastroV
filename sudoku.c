@@ -55,13 +55,14 @@ int* lineaVacia()
 
 int is_valid(Node* n)
 {
+  int sudo;
   int* flag;
   for(int i=0;i<9;i++)
   {
     flag=lineaVacia();
     for(int j=0;j<9;j++)
     {
-      int sudo=n->sudo[i][j];
+      sudo=n->sudo[i][j];
       if(sudo!=0)
       {
         if(flag[sudo]!=0)
@@ -74,7 +75,7 @@ int is_valid(Node* n)
     flag=lineaVacia();
     for(int j=0;j<9;j++)
     {
-      int sudo=n->sudo[j][i];
+      sudo=n->sudo[j][i];
       if(sudo!=0)
       {
         if(flag[sudo]!=0)
@@ -86,26 +87,25 @@ int is_valid(Node* n)
     }
   }
   for(int l=0;l<9;l++)
+  {
+    flag=lineaVacia();
+    for(int a=0;a<9;a++)
     {
-      flag=lineaVacia();
-      for(int a=0;a<9;a++)
+      int i = 3 * (l / 3) + (a / 3);
+      int j = 3 * (l % 3) + (a % 3);
+      sudo=n->sudo[i][j];
+      if(sudo==0)continue;
+      if(flag[sudo]==0)
       {
-        int i = 3 * (l / 3) + (a / 3);
-        int j = 3 * (l % 3) + (a % 3);
-        int sudo=n->sudo[i][j];
-        if(sudo==0)continue;
-        if(flag[sudo]==0)
-        {
-          flag[sudo]=1;
-        }
-        else
-        {
-          return 0;
-        }
+        flag[sudo]=1;
+      }
+      else
+      {
+        return 0;
       }
     }
-
-    return 1;
+  }
+  return 1;
 }
 
 int posicionActual(Node*n,int linea)
