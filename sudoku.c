@@ -85,7 +85,7 @@ int is_valid(Node* n)
           flag[sudo]=1;
         }
       }
-    free(flag);
+    //free(flag);
   }
   for(int l=0;l<9;l++)
     {
