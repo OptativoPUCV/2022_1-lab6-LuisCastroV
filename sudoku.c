@@ -167,13 +167,12 @@ Node* DFS(Node* initial, int* cont)
   push(S, initial);
   while(top(S)!=NULL)
   {
-    
-    //Node* n=top(S); 
+    Node* n=top(S); 
     pop(S);
-     // if(!n->visited)
-     // {
-     //     print_tag(n); n->visited=1;
-     // }
+    if(is_final(n)==1)
+    { 
+       return n;
+    }
      // else 
      // {
      // List* l=get_adj_nodes(n);
