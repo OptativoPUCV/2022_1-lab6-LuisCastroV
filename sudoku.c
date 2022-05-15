@@ -115,7 +115,7 @@ int posicionActual(Node*n,int linea)
 {
   for(int i=0;i<9;i++)
     {
-      if(n->sudo[line][i]==0)
+      if(n->sudo[linea][i]==0)
       {
         return i
       }

@@ -216,3 +216,13 @@ sudoku.c:121:7: error: expected ‘;’ before ‘}’ token
        ^
 Compilation failed
 64ffe81
+Sun May 15 04:59:26 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘posicionActual’:
+sudoku.c:121:7: error: expected ‘;’ before ‘}’ token
+       }
+       ^
+Compilation failed
+b8bda59
