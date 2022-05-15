@@ -45,11 +45,11 @@ void print_node(Node* n){
 
 int vacio()
 {
-  int* creador=(int*)malloc(sizeof(int)*10);
-  for(int i=0;i<10;i++)
-    {
-      creador[i]=0;
-    }
+  // int* creador=(int*)malloc(sizeof(int)*10);
+  // for(int i=0;i<10;i++)
+  //   {
+  //     creador[i]=0;
+  //   }
   return creador;
 }
 
