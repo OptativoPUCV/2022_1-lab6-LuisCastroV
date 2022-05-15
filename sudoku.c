@@ -55,7 +55,7 @@ int* lineaVacia()
 
 int is_valid(Node* n)
 {
-  int flag;
+  int* flag;
   for(int i=0;i<9;i++)
   {
     flag=lineaVacia();
