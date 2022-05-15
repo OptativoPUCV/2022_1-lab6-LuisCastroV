@@ -93,6 +93,18 @@ int is_valid(Node* n)
       for(int a=0;a<9;a++){
         int i = 3 * (k / 3) + (p / 3);
         int j = 3 * (k % 3) + (p % 3);
+
+        int sudo=n->sudo[i][j];
+        if(sudo==0)continue;
+        if(flag[sudo]==0)
+        {
+          flag[sudo]=1;
+        }
+        else
+        {
+          free(flag);
+          return 0;
+        }
       }
     }
 

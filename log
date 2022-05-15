@@ -129,3 +129,21 @@ sudoku.c:94:13: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 dc490cc
+Sun May 15 04:46:00 UTC 2022: 
+ sudoku.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘vacio’:
+sudoku.c:51:7: error: ‘check’ undeclared (first use in this function)
+       check[i]=0;
+       ^~~~~
+sudoku.c:51:7: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c: In function ‘is_valid’:
+sudoku.c:94:22: error: ‘k’ undeclared (first use in this function)
+         int i = 3 * (k / 3) + (p / 3);
+                      ^
+sudoku.c:94:32: error: ‘p’ undeclared (first use in this function)
+         int i = 3 * (k / 3) + (p / 3);
+                                ^
+Compilation failed
+8fcc626
