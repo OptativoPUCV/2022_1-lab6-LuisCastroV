@@ -460,3 +460,14 @@ sudoku.c:165:7: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 b85765d
+Sun May 15 05:27:47 UTC 2022: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘DFS’:
+sudoku.c:190:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+64b6eff

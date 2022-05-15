@@ -187,7 +187,6 @@ Node* DFS(Node* initial, int* cont)
   //   (*cont)++;
   // }  
   // return NULL;
-  return;
 }
 
 /*
