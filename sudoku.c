@@ -129,7 +129,7 @@ List* get_adj_nodes(Node* n)
   {
     if(posicionActual(n,i)!=0)
     {
-      for(int j=0;j<9;j++)
+      for(int j=1;j<10;j++)
       {
         Node* Adj=copy(n);
         int detecotr=posicionActual(n,i);
