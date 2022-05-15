@@ -726,3 +726,16 @@ Sun May 15 16:51:33 UTC 2022:
  tests:  7|1
 total_score: 55/70
 0e29ef5
+Sun May 15 17:03:14 UTC 2022: 
+ sudoku.c | 98 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 86 insertions(+), 12 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:139:10: error: redefinition of ‘creador’
+     int* creador=(int*)malloc(sizeof(int)*11);
+          ^~~~~~~
+sudoku.c:120:10: note: previous definition of ‘creador’ was here
+     int* creador=(int*)malloc(sizeof(int)*11);
+          ^~~~~~~
+Compilation failed
+2a5b747

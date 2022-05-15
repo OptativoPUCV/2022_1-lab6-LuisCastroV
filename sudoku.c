@@ -43,22 +43,86 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int* vacio()
-{
-  int* creador=(int*)malloc(sizeof(int)*11);
-  for(int i=0;i<10;i++)
-    {
-      creador[i]=0;
-    }
-  return creador;
-}
+// int* vacio()
+// {
+//   int* creador=(int*)malloc(sizeof(int)*11);
+//   for(int i=0;i<10;i++)
+//     {
+//       creador[i]=0;
+//     }
+//   return creador;
+// }
+
+// int is_valid(Node* n)
+// {
+//   int* flag;
+//   for(int i=0;i<9;i++)
+//   {
+//     flag=vacio();
+//     for(int j=0;j<9;j++)
+//     {
+//       int sudo=n->sudo[i][j];
+//       if(sudo!=0)
+//       {
+//         if(flag[sudo]!=0)
+//         {
+//           return 0;
+//         }
+//         flag[sudo]=1;
+//       }
+//     }
+//     free(flag);
+//     flag=vacio();
+//     for(int j=0;j<9;j++)
+//       {
+//         int sudo=n->sudo[j][i];
+//         if(sudo!=0)
+//         {
+//           if(flag[sudo]!=0)
+//           {
+//             return 0;
+//           }
+//           flag[sudo]=1;
+//         }
+//       }
+//     free(flag);
+//   }
+//   for(int l=0;l<9;l++)
+//     {
+//       flag=vacio();
+//       for(int a=0;a<9;a++){
+//         int i = 3 * (l / 3) + (a / 3);
+//         int j = 3 * (l % 3) + (a % 3);
+
+//         int sudo=n->sudo[i][j];
+//         if(sudo==0)continue;
+//         if(flag[sudo]==0)
+//         {
+//           flag[sudo]=1;
+//         }
+//         else
+//         {
+//           free(flag);
+//           return 0;
+//         }
+//       }
+//     }
+
+//     return 1;
+// }
 
 int is_valid(Node* n)
 {
   int* flag;
+  
   for(int i=0;i<9;i++)
   {
-    flag=vacio();
+    int* creador=(int*)malloc(sizeof(int)*11);
+    for(int i=0;i<10;i++)
+    {
+      creador[i]=0;
+    }
+    flag=creador;
     for(int j=0;j<9;j++)
     {
       int sudo=n->sudo[i][j];
@@ -72,7 +136,12 @@ int is_valid(Node* n)
       }
     }
     free(flag);
-    flag=vacio();
+    int* creador=(int*)malloc(sizeof(int)*11);
+    for(int i=0;i<10;i++)
+    {
+      creador[i]=0;
+    }
+    flag=creador;
     for(int j=0;j<9;j++)
       {
         int sudo=n->sudo[j][i];
@@ -89,7 +158,12 @@ int is_valid(Node* n)
   }
   for(int l=0;l<9;l++)
     {
-      flag=vacio();
+      int* creador=(int*)malloc(sizeof(int)*11);
+      for(int i=0;i<10;i++)
+      {
+        creador[i]=0;
+      }
+      flag=creador;
       for(int a=0;a<9;a++){
         int i = 3 * (l / 3) + (a / 3);
         int j = 3 * (l % 3) + (a % 3);
