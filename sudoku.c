@@ -48,7 +48,7 @@ int* vacio()
   int* creador=(int*)malloc(sizeof(int)*11);
   for(int i=0;i<10;i++)
     {
-      check[i]=0;
+      creador[i]=0;
     }
   return creador;
 }

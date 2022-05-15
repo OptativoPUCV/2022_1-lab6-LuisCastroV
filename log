@@ -158,3 +158,9 @@ sudoku.c:51:7: error: ‘check’ undeclared (first use in this function)
 sudoku.c:51:7: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 2828cd6
+Sun May 15 04:46:37 UTC 2022: 
+ sudoku.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|4
+total_score: 20/70
+b11a1f1
