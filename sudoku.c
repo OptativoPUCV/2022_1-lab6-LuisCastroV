@@ -117,7 +117,7 @@ int posicionActual(Node*n,int linea)
     {
       if(n->sudo[linea][i]==0)
       {
-        return i
+        return i;
       }
     }
   return 0;
