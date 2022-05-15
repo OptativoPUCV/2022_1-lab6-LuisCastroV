@@ -184,7 +184,7 @@ Node* DFS(Node* initial, int* cont)
         adj=next(l);
       }
     }
-    free(n);
+    //free(n);
     (*cont)++;
   }  
   return NULL;
