@@ -117,7 +117,7 @@ int is_valid(Node* n)
   
   for(int i=0;i<9;i++)
   {
-    int creador=(int*)malloc(sizeof(int)*11);
+    int creador=(int)malloc(sizeof(int)*11);
     for(int i=0;i<10;i++)
     {
       creador[i]=0;
@@ -136,7 +136,7 @@ int is_valid(Node* n)
       }
     }
     free(flag);
-    int creador=(int*)malloc(sizeof(int)*11);
+    int creador=(int)malloc(sizeof(int)*11);
     for(int i=0;i<10;i++)
     {
       creador[i]=0;
@@ -158,7 +158,7 @@ int is_valid(Node* n)
   }
   for(int l=0;l<9;l++)
     {
-      int creador=(int*)malloc(sizeof(int)*11);
+      int creador=(int)malloc(sizeof(int)*11);
       for(int i=0;i<10;i++)
       {
         creador[i]=0;

@@ -780,3 +780,44 @@ sudoku.c:166:11: error: assignment makes pointer from integer without a cast [-W
 cc1: all warnings being treated as errors
 Compilation failed
 cf11f9a
+Sun May 15 17:03:56 UTC 2022: 
+ sudoku.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:120:17: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+     int creador=(int)malloc(sizeof(int)*11);
+                 ^
+sudoku.c:123:14: error: subscripted value is neither array nor pointer nor vector
+       creador[i]=0;
+              ^
+sudoku.c:125:9: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     flag=creador;
+         ^
+sudoku.c:139:9: error: redefinition of ‘creador’
+     int creador=(int)malloc(sizeof(int)*11);
+         ^~~~~~~
+sudoku.c:120:9: note: previous definition of ‘creador’ was here
+     int creador=(int)malloc(sizeof(int)*11);
+         ^~~~~~~
+sudoku.c:139:17: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+     int creador=(int)malloc(sizeof(int)*11);
+                 ^
+sudoku.c:142:14: error: subscripted value is neither array nor pointer nor vector
+       creador[i]=0;
+              ^
+sudoku.c:144:9: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+     flag=creador;
+         ^
+sudoku.c:161:19: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+       int creador=(int)malloc(sizeof(int)*11);
+                   ^
+sudoku.c:164:16: error: subscripted value is neither array nor pointer nor vector
+         creador[i]=0;
+                ^
+sudoku.c:166:11: error: assignment makes pointer from integer without a cast [-Werror=int-conversion]
+       flag=creador;
+           ^
+cc1: all warnings being treated as errors
+Compilation failed
+18d8c7a
